@@ -8,7 +8,7 @@ Thank You for giving me the opportunity to attempt the test, this is the first t
 * [Setup](#setup)
 
 ## General info
-This project is simple testcase for "".
+This project is simple testcase for "Verifying File Downloading Functionality".
 	
 ## Technologies
 Project is created with:
@@ -21,3 +21,10 @@ To run this project locally, we need to do following things :
 *  [Install Java](https://docs.oracle.com/en/java/javase/16/install/installation-jdk-microsoft-windows-platforms.html#GUID-A7E27B90-A28D-4237-9383-A58B416071CA)
 *  [Install Maven](https://maven.apache.org/install.html)
 *  [Install EclipseIDE](https://wiki.eclipse.org/Eclipse/Installation#Eclipse_4.19_.282021-03.29)
+*  Add [TestNG Plugin](https://testng.org/doc/download.html) to Eclipse if need to run as a TestNG Class
+*  Install Git - [click here](https://www.atlassian.com/git/tutorials/install-git#windows) for easy tutorial
+
+## Command Line Instructions
+To get the project in you machine we will need to clone it first
+* 
+
