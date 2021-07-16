@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-15T18:12:07 IST" name="Default suite" finished-at="2021-07-15T18:12:07 IST" duration-ms="84">
+  <suite started-at="2021-07-16T21:08:52 IST" name="Default suite" finished-at="2021-07-16T21:09:03 IST" duration-ms="11083">
     <groups>
     </groups>
-    <test started-at="2021-07-15T18:12:07 IST" name="Default test" finished-at="2021-07-15T18:12:07 IST" duration-ms="84">
-      <class name="AutomationTestCases.IgniteSolutions.TestCase">
-        <test-method signature="testcase()[pri:0, instance:AutomationTestCases.IgniteSolutions.TestCase@21a5fd96]" started-at="2021-07-15T18:12:07 IST" name="testcase" finished-at="2021-07-15T18:12:07 IST" duration-ms="20" status="PASS">
+    <test started-at="2021-07-16T21:08:52 IST" name="Default test" finished-at="2021-07-16T21:09:03 IST" duration-ms="11083">
+      <class name="AutomationTestCases.IgniteSolutions.testCase_VerifyFileDownload">
+        <test-method is-config="true" signature="validateTitle()[pri:0, instance:AutomationTestCases.IgniteSolutions.testCase_VerifyFileDownload@4e9658b5]" started-at="2021-07-16T21:08:52 IST" name="validateTitle" finished-at="2021-07-16T21:08:52 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase -->
-      </class> <!-- AutomationTestCases.IgniteSolutions.TestCase -->
+        </test-method> <!-- validateTitle -->
+        <test-method signature="toDownloadFile()[pri:0, instance:AutomationTestCases.IgniteSolutions.testCase_VerifyFileDownload@4e9658b5]" started-at="2021-07-16T21:08:52 IST" name="toDownloadFile" finished-at="2021-07-16T21:09:03 IST" duration-ms="11001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toDownloadFile -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTestCases.IgniteSolutions.testCase_VerifyFileDownload@4e9658b5]" started-at="2021-07-16T21:09:03 IST" name="tearDown" finished-at="2021-07-16T21:09:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AutomationTestCases.IgniteSolutions.testCase_VerifyFileDownload -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

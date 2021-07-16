@@ -1,15 +1,11 @@
 package resources;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,36 +13,31 @@ public class BaseClass {
 
 	protected String path = System.getProperty("user.dir");
 	WebDriver driver;
+	protected String downloadPath = path + "\\downloaded-files"; 
 
 	public WebDriver initializeDriver() {
 
-		Properties prop = new Properties();
-		try {
-			InputStream file = new FileInputStream(path + "/configuration/config.properties");
-			prop.load(file);
-		} catch (IOException e) {
-			System.out.println("File Exception Occured : " + e);
-		}
-		String bname = prop.getProperty("browser");
+		WebDriverManager.chromedriver().setup();
 
-		if (bname.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-		} else if (bname.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		} else if (bname.equalsIgnoreCase("IE")) {
-			WebDriverManager.iedriver().setup();
-			driver = new InternetExplorerDriver();
-		} else {
-			System.out.println("No browser input in config file");
-		}
+		ChromeOptions options = new ChromeOptions();
 
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		HashMap<String, Object> chromePref = new HashMap<>();
+		
+		chromePref.put("profile.default_content_settings.popups", 0);
+
+		chromePref.put("download.default_directory", downloadPath); /*We are setting chrome download path so that file
+																	  will be downloaded in the project irrespective of
+																	  any user*/
+
+		options.setExperimentalOption("prefs", chromePref);
+
+		driver = new ChromeDriver(options);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.manage().window().maximize();
 
-		driver.navigate().to("http://skunkworks.ignitesol.com:3000/");
+		driver.get("http://skunkworks.ignitesol.com:3000/");
 
 		return driver;
 
