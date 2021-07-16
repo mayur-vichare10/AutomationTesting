@@ -25,6 +25,18 @@ To run this project locally, we need to do following things :
 *  Install Git - [click here](https://www.atlassian.com/git/tutorials/install-git#windows) for easy tutorial
 
 ## Command Line Instructions
-To get the project in you machine we will need to clone it first
-* 
+### To get the project in you machine we will need to clone it first
+Create a local directory to clone git repo over there
+**In command-line for cloning git repo:**
+* cd {local directory to pull git repo}
+* git init
+* git clone https://github.com/mayur-vichare10/AutomationTesting.git
+
+Open the project in EclipseIDE
+
+**In command-line running Maven Project:**
+* cd {project folder path to pom.xml}
+* mvn compile
+* mvn test
+
 
