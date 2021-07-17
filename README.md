@@ -32,7 +32,7 @@ Create a local directory to clone git repo over there
 * git init
 * git clone https://github.com/mayur-vichare10/AutomationTesting.git
 
-Open the project in EclipseIDE
+**Open the project in EclipseIDE**
 
 **In command-line running Maven Project:**
 * cd {project folder path to pom.xml}
